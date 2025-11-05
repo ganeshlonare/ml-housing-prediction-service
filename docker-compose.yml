@@ -1,0 +1,29 @@
+services:
+  # PostgreSQL Database Service
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - KAGGLE_USERNAME=${KAGGLE_USERNAME}
+      - KAGGLE_KEY=${KAGGLE_KEY}
+    ports:
+      - "5432:5432"
+
+  # FastAPI Application Service
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    # This line loads all variables from .env into your FastAPI container
+    env_file:
+      - .env
+    depends_on:
+      - db
+  
+
+volumes:
+  postgres_data:

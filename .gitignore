@@ -1,0 +1,70 @@
+# ----------------------------------------------------------------
+# --- Environment / Dependencies ---
+# ----------------------------------------------------------------
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+env.bak/
+.env.bak/
+
+# Environment variables file
+# IMPORTANT: Never commit your secrets!
+.env
+
+# ----------------------------------------------------------------
+# --- Python Specific ---
+# ----------------------------------------------------------------
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ----------------------------------------------------------------
+# --- Editor / IDE Specific ---
+# ----------------------------------------------------------------
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# ----------------------------------------------------------------
+# --- Testing & Coverage ---
+# ----------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ----------------------------------------------------------------
+# --- Other ---
+# ----------------------------------------------------------------
+
+# Log files
+*.log
+
+# Local database files (e.g., for development)
+*.sqlite3
+db.sqlite3
